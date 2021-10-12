@@ -7,6 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.savalicodes.globochat.R
 
 
 class MainActivity : AppCompatActivity() {
