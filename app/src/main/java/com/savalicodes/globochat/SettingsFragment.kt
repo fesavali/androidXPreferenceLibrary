@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
+import com.savalicodes.globochat.R
 
 
 class SettingsFragment : Fragment() {

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import com.savalicodes.globochat.R
 
 
 class ChatListFragment : Fragment() {
@@ -25,7 +26,7 @@ class ChatListFragment : Fragment() {
             R.id.action_settings -> {
                 val navHostFragment = activity?.supportFragmentManager?.findFragmentById(R.id.nav_host_frag) as NavHostFragment
                 val navController = navHostFragment.navController
-                val action = ChatListFragmen tDirections.actionChatListToSettings()
+                val action = ChatListFragmentDirections.actionChatListToSettings()
                 navController.navigate(action)
                 return true
             }
