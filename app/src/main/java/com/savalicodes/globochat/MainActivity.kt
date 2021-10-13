@@ -1,4 +1,4 @@
-package com.sriyank.globochat
+package com.savalicodes.globochat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
