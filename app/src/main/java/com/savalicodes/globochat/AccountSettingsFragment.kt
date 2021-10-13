@@ -1,4 +1,4 @@
-package com.sriyank.globochat
+package com.savalicodes.globochat
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
