@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GloboChat</string>
+    <string name="key">key_auto_reply</string>
 </resources>
