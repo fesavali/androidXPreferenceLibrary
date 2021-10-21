@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
 //        get preference value using key
         val autoReplyTime = sharedPreference.getString(getString(R.string.key_auto_reply_time), "")
-        Log.i("Settings Screen", "auto replay time: $autoReplyTime")
+        Log.i("Main activity", "auto replay time: $autoReplyTime")
     }
 
     override fun onSupportNavigateUp(): Boolean {
