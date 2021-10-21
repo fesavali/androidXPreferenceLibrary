@@ -1,6 +1,7 @@
 package com.savalicodes.globochat
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.PreferenceManager
 import com.sriyank.globochat.ChatListFragmentDirections
 import com.sriyank.globochat.SettingsFragmentDirections
 
@@ -27,5 +29,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
             navController.navigate(action)
             true
         }
+//        get preference to the preferences
+        val sharedPreference = PreferenceManager.getDefaultSharedPreferences(context)
+//        get preference value using key
+        val autoReplyTime = sharedPreference.getString(getString(R.string.key_auto_reply_time), "")
+        Log.i("Settings Screen", "auto replay time: $autoReplyTime")
+
+        val autoDownload = sharedPreference.getBoolean(getString(R.string.key_auto_download), false)
+        Log.i("Settings Screen", "Auto download: $autoDownload")
     }
 }
