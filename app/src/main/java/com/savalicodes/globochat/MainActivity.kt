@@ -2,11 +2,13 @@ package com.savalicodes.globochat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.preference.PreferenceManager
 import com.savalicodes.globochat.R
 
 
@@ -28,6 +30,12 @@ class MainActivity : AppCompatActivity() {
 
         // Link ActionBar with NavController
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        //        get preference to the preferences
+        val sharedPreference = PreferenceManager.getDefaultSharedPreferences(this)
+//        get preference value using key
+        val autoReplyTime = sharedPreference.getString(getString(R.string.key_auto_reply_time), "")
+        Log.i("Settings Screen", "auto replay time: $autoReplyTime")
     }
 
     override fun onSupportNavigateUp(): Boolean {
