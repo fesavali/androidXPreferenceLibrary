@@ -44,7 +44,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 //        executed before value has changed
         statusPref?.onPreferenceChangeListener =
             Preference.OnPreferenceChangeListener { preference, newValue ->
-                TODO("Not yet implemented")
+
                 Log.i("Setting fragment", "new status: $newValue")
                 val newStatus = newValue as String
                 if (newStatus.contains("bad")){
