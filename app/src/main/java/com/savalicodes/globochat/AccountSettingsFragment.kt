@@ -12,7 +12,7 @@ class AccountSettingsFragment : PreferenceFragmentCompat() {
 
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.account_settings, rootKey)
+//        setPreferencesFromResource(R.xml.account_settings, rootKey)
 //        define all preference objects
     val publicInfoRef = MultiSelectListPreference(context)
         publicInfoRef.entries = resources.getStringArray(R.array.entries_public_info)
