@@ -64,8 +64,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
         notificationPref?.preferenceDataStore = dataStore
     }
     class DataStore : PreferenceDataStore () {
-//        Override Methods only per your needs.
+        //        Override Methods only per your needs.
 //        DO NOT override methods that you don't need.
 //         After overriding, remove the super call (could through UnsupportedOperationException)
+        override fun getBoolean(key: String?, defValue: Boolean): Boolean {
+            return defValue
+        }
+
+        override fun putBoolean(key: String?, value: Boolean) {
+
+        }
     }
 }
