@@ -12,7 +12,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.settings, rootKey)
 
-        val dataStore = DataStore()
+//        val dataStore = DataStore()
         // Enable PreferenceDataStore for entire hierarchy and disables the SharedPreferences
 //        preferenceManager.preferenceDataStore = dataStore
 
@@ -59,34 +59,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
             else
                 "Status: OFF"
         }
-
-        notificationPref?.preferenceDataStore = dataStore
-
-        val isNotifEnabled = dataStore.getBoolean("key_new_msg_notif", false)
     }
 
-    class DataStore : PreferenceDataStore() {
-
-        // Override methods only as per your need.
-        // DO NOT override methods which you don't need to use.
-        // After overriding, remove the super call. (could throw UnsupportedOperationException)
-
-        override fun getBoolean(key: String?, defValue: Boolean): Boolean {
-
-            if (key == "key_new_msg_notif") {
-                // Retrieve value from cloud or local db
-                Log.i("DataStore", "getBoolean executed for $key")
-            }
-
-            return defValue
-        }
-
-        override fun putBoolean(key: String?, value: Boolean) {
-
-            if (key == "key_new_msg_notif") {
-                // Save value to cloud or local db
-                Log.i("DataStore", "putBoolean executed for $key with new value: $value")
-            }
-        }
-    }
 }
