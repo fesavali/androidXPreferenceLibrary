@@ -12,9 +12,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.settings, rootKey)
 
-//        val dataStore = DataStore()
+        //create instance of class datastore
+        val dataStore = DataStore()
         // Enable PreferenceDataStore for entire hierarchy and disables the SharedPreferences
-//        preferenceManager.preferenceDataStore = dataStore
+//        preferenceManager.preferenceDataStore = dataStore enables for all
 
         val accSettingsPref = findPreference<Preference>(getString(R.string.key_account_settings))
 
@@ -59,6 +60,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
             else
                 "Status: OFF"
         }
+        //calls dataStore for this specific pref
+        notificationPref?.preferenceDataStore = dataStore
     }
     class DataStore : PreferenceDataStore () {
 //        Override Methods only per your needs.
