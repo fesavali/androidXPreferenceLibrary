@@ -62,6 +62,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
         //calls dataStore for this specific pref
         notificationPref?.preferenceDataStore = dataStore
+//        returns the value of a preference
+        val prefValue = dataStore.getBoolean("key_new_msg_notif", false)
     }
     class DataStore : PreferenceDataStore () {
         //        Override Methods only per your needs.
