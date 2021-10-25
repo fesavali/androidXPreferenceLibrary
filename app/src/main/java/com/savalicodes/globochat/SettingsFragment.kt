@@ -60,5 +60,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 "Status: OFF"
         }
     }
-
+    class DataStore : PreferenceDataStore () {
+//        Override Methods only per your needs.
+//        DO NOT override methods that you don't need.
+//         After overriding, remove the super call (could through UnsupportedOperationException)
+    }
 }
