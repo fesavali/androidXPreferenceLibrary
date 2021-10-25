@@ -68,12 +68,17 @@ class SettingsFragment : PreferenceFragmentCompat() {
 //        DO NOT override methods that you don't need.
 //         After overriding, remove the super call (could through UnsupportedOperationException)
         override fun getBoolean(key: String?, defValue: Boolean): Boolean {
+            if(key == "key_new_msg_notif"){
+//                retrieve data from local DB or cloud
+                Log.i("DataStore", "getBooleanExecuted for $key")
+            }
             return defValue
         }
 
         override fun putBoolean(key: String?, value: Boolean) {
             if(key == "key_new_msg_notif"){
-//                save data to local DB
+//                save data to local DB or cloud
+                Log.i("DataStore", "putBooleanExecuted for $key with new value: $value")
             }
         }
     }
